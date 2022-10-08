@@ -1,4 +1,4 @@
-package ru.bmstu.ktorsocket.content.data
+package bmstu.ru.data
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -14,5 +14,5 @@ data class Data(
 @Serializable
 data class Response(
     @SerialName("result")
-    val res: Boolean
+    val res: String
 )
