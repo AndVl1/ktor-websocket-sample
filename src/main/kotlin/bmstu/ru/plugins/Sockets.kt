@@ -32,17 +32,6 @@ fun Application.configureSockets() {
     }
 
     routing {
-        webSocket("/num/output") {
-            var i = 0// websocketSession
-            println("connect output")
-            while (true) {
-//                val data = receiveDeserialized<Data>() ?: continue
-//                println("$data")
-                i++
-                delay(1000)
-                send(Frame.Text(i.toString()))
-            }
-        }
         webSocket("/num/input") {
             println("connect input")
             incoming.consumeAsFlow()
